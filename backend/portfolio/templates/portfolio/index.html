@@ -2,18 +2,10 @@
 
 {% block 'content' %}
 
-<h1>Hello</h1>
-{% for object in object_list %}
+{% include 'portfolio/components/hello_screen.html'%}
 
-<div class="card" style="background-image: url({{object.image.url}})">
-    <div class="card-body">
-        <h4 class="card-title">Проект</h4>
-        <h6 class="card-subtitle mb-2 text-muted">{{ object.name }}</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-        <a href="#" class="card-link">Перейти</a>
-    </div>
-</div>
-{% endfor %}
+{% include 'portfolio/components/portfolio_elements.html' with object_list=object_list %}
+
+{% include 'portfolio/components/about_company.html' %}
 
 {% endblock %}
