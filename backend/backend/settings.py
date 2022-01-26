@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'portfolio',
     'team',
+    'main',
 ]
 
 MIDDLEWARE = [
