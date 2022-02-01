@@ -1,6 +1,8 @@
 from django.contrib import admin
+from django.utils.html import mark_safe
+from django_summernote.admin import SummernoteModelAdmin
 
-from main.models import Price
+from main.models import Price, HeaderSlide, ServiceFooter, Page
 
 
 @admin.register(Price)
