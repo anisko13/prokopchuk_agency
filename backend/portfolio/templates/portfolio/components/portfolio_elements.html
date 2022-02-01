@@ -8,13 +8,13 @@
                          src="{{ object.image.url }}" aria-label="Placeholder: Thumbnail"
                          preserveAspectRatio="xMidYMid slice" role="img" focusable="false"/>
                     <div class="card-body">
-                        <p class="card-text">{{ object.name }}.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Посмотреть</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Редактировать</button>
-                            </div>
-                            <small class="text-muted">9 минут</small>
+                        <p class="card-text" style="color: white; text-align: center; padding: 5px; margin-top: -50px; background: #6351ce; border-radius: 15px">
+                            {{ object.name }}
+                        </p>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <button class="btn btn-primary" onclick="location.href='{{object.link}}'">
+                                Подробнее
+                            </button>
                         </div>
                     </div>
                 </div>

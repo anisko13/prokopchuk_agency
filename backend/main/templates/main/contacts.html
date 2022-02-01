@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block 'content' %}
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container bootstrap snippets bootdeys">
+      <div class="row text-center">
+        <div class="col-sm-4">
+          <div class="contact-detail-box">
+            <i class="fa fa-th fa-3x text-colored"></i>
+            <h4>Остаемся на связи!</h4>
+            <abbr title="Phone">P:</abbr> +000 000 00 00<br>
+            E: <a href="mailto:anisochka12341@gmail.com" class="text-muted">anisochka12341@gmail.com</a>
+          </div>
+        </div><!-- end col -->
+
+        <div class="col-sm-4">
+          <div class="contact-detail-box">
+            <i class="fa fa-map-marker fa-3x text-colored"></i>
+            <h4>Мы находимся здесь:</h4>
+
+            <address>
+            Украина, г. Киев<br>
+            ул. Вадима Гетьмана, 6<br>
+            ТРЦ COSMO Multimall<br>
+          </address>
+          </div>
+        </div><!-- end col -->
+
+        <div class="col-sm-4">
+          <div class="contact-detail-box">
+            <i class="fa fa-book fa-3x text-colored"></i>
+            <h4>Оставить заявку 24x7</h4>
+
+            <p>Оставьте свое сообщение. Мы свяжемся с вами в ближайшее рабочее время</p>
+            <p>ПН-ПТ 09:00-21:00</p>
+            <p>СБ-ВС 12:00-19:00</p>
+          </div>
+        </div><!-- end col -->
+
+      </div>
+      <!-- end row -->
+
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.534836752112!2d30.43917141589609!3d50.449764495295085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc24d030cf41%3A0xfbed7f422ec96831!2sCosmo%20Multimall!5e0!3m2!1sru!2sua!4v1643641149473!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div><!-- end col -->
+
+        <!-- Contact form -->
+        <div class="col-sm-6">
+          <form role="form" name="ajax-form" id="ajax-form" action="https://formsubmit.io/send/coderthemes@gmail.com" method="post" class="form-main">
+
+            <div class="form-group">
+              <label for="name2">Ф. И. О. </label>
+              <input class="form-control" id="name2" name="name" onblur="if(this.value == '') this.value='Name'" onfocus="if(this.value == 'Name') this.value=''" type="text" value="Name">
+              <div class="error" id="err-name" style="display: none;">Введите данные</div>
+            </div> <!-- /Form-name -->
+
+            <div class="form-group">
+              <label for="email2">Email</label>
+              <input class="form-control" id="email2" name="email" type="text" onfocus="if(this.value == 'E-mail') this.value='';" onblur="if(this.value == '') this.value='E-mail';" value="E-mail">
+              <div class="error" id="err-emailvld" style="display: none;">E-mail is not a valid format</div>
+            </div> <!-- /Form-email -->
+
+            <div class="form-group">
+              <label for="message2">Сообщение</label>
+              <textarea class="form-control" id="message2" name="message" rows="5" onblur="if(this.value == '') this.value='Message'" onfocus="if(this.value == 'Message') this.value=''">Message</textarea>
+
+              <div class="error" id="err-message" style="display: none;">Please enter message</div>
+            </div> <!-- /col -->
+
+            <div class="row">
+              <div class="col-xs-12">
+                <div id="ajaxsuccess" class="text-success">E-mail was successfully sent.</div>
+                <div class="error" id="err-form" style="display: none;">There was a problem validating the form please check!</div>
+                <div class="error" id="err-timedout">The connection to the server timed out!</div>
+                <div class="error" id="err-state"></div>
+                <button type="submit" class="btn btn-primary btn-shadow btn-rounded w-md" id="send">Отправить</button>
+              </div> <!-- /col -->
+            </div> <!-- /row -->
+
+          </form> <!-- /form -->
+        </div> <!-- end col -->
+
+      </div> <!-- end row -->
+
+    </div>
+
+{% endblock %}
