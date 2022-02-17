@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.utils.html import mark_safe
 from django_summernote.admin import SummernoteModelAdmin
 
-from main.models import Price, HeaderSlide, ServiceFooter, Page
+from main.models import Price, HeaderSlide, ServiceFooter, Page, Event
 
 
 @admin.register(Price)
@@ -24,3 +24,8 @@ class ServiceFooterAdmin(SummernoteModelAdmin):
 @admin.register(Page)
 class PageAdmin(admin.ModelAdmin):
     list_display = ['title']
+
+
+@admin.register(Event)
+class EventAdmin(admin.ModelAdmin):
+    list_display = ['name']
