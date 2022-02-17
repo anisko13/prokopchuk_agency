@@ -44,6 +44,7 @@ class EventsView(TemplateView):
     def get_context_data(self, **kwargs):
         data = super().get_context_data(**kwargs)
         data['seo_texts'] = ServiceFooter.objects.filter(page__title='events')
+        return data
 
 class ReklamaView(TemplateView):
     template_name = 'main/reklama.html'

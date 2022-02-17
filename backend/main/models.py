@@ -54,3 +54,16 @@ class ServiceFooter(models.Model):
     class Meta:
         verbose_name = 'SEO текст'
         verbose_name_plural = 'SEO тексты'
+
+
+class Event(models.Model):
+    name = models.CharField('Заголовок', max_length=120)
+    image = models.FileField('Изображение мероприятия', upload_to='events/')
+    description = models.TextField('Описание')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Мероприятие'
+        verbose_name_plural = 'Мероприятия'
