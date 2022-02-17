@@ -38,12 +38,27 @@ class SeoserviceView(TemplateView):
         data['seo_texts'] = ServiceFooter.objects.filter(page__title='seo-service')
         return data
 
+class EventsView(TemplateView):
+    template_name = 'main/events.html'
+
+    def get_context_data(self, **kwargs):
+        data = super().get_context_data(**kwargs)
+        data['seo_texts'] = ServiceFooter.objects.filter(page__title='events')
+
 class ReklamaView(TemplateView):
     template_name = 'main/reklama.html'
 
     def get_context_data(self, **kwargs):
         data = super().get_context_data(**kwargs)
         data['seo_texts'] = ServiceFooter.objects.filter(page__title='reklama')
+        return data
+
+class OrmmarketingView(TemplateView):
+    template_name = 'main/orm-marketing.html'
+
+    def get_context_data(self, **kwargs):
+        data = super().get_context_data(**kwargs)
+        data['seo_texts'] = ServiceFooter.objects.filter(page__title='orm-marketing')
         return data
 
 class ContactsView(TemplateView):

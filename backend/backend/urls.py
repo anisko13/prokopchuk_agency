@@ -3,7 +3,8 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
-from main.views import FAQView, PricingView, ServicesView, SeoserviceView, ReklamaView, ContactsView, WebsiteCreationView, SeoacademyView, SeokursobuchenieView, SmmprodvijenieView
+from main.views import FAQView, PricingView, ServicesView, SeoserviceView, ReklamaView, ContactsView, WebsiteCreationView, \
+    SeoacademyView, SeokursobuchenieView, SmmprodvijenieView, OrmmarketingView, EventsView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -19,7 +20,10 @@ urlpatterns = [
     path('seo-academy', SeoacademyView.as_view(), name='seo-academy'),
     path('seo-kurs-obuchenie', SeokursobuchenieView.as_view(), name='seo-kurs-obuchenie'),
     path('smm-prodvijenie', SmmprodvijenieView.as_view(), name='smm-prodvijenie'),
+    path('orm-marketing', OrmmarketingView.as_view(), name='orm-marketing'),
+    path('events', EventsView.as_view(), name='events'),
 
     path('summernote/', include('django_summernote.urls')),
+    path('i18n', include('django.conf.urls.i18n'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
